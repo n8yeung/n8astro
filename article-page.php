@@ -19,10 +19,8 @@
         </div>
     </div>
     <div class="container marketing">
-        <div class="row">
-            <div class="col-lg-12 mb-5">
-                <?php the_content(); ?>
-            </div>
+        <div class="col-lg-12 mb-5">
+            <div class="left-aligned-content"><?php the_content(); ?></div>
         </div>
     </div> 
     <?php endwhile; ?>

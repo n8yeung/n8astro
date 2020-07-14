@@ -55,7 +55,7 @@ Text Domain: n8astro
   text-align: center;
 }
 
-.card-content {
+.left-aligned-content {
   text-align: left;
 }
 
@@ -96,8 +96,8 @@ Text Domain: n8astro
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 12rem;
   background-color: #777;
+  height: 12rem;
   margin-top: 56px;
 }
 
@@ -219,7 +219,7 @@ body {
   /* padding-top: 3rem;
   padding-bottom: 3rem; */
   color: #5a5a5a;
-  background-color: #F5F5F5;
+  background-color: #F5F5F5; 
 }
 
 h1 {
@@ -262,7 +262,7 @@ sup.smaller {
   padding-bottom: 20px;
   position: absolute;
   text-align: center;
-  z-index: 10;
+  z-index: 10;  
 }
 
 /* Hero Inner section */
@@ -274,8 +274,9 @@ sup.smaller {
 
 /* Declare heights because of positioning of img element */
 .hero-item {
-  height: 12rem;
   background-color: #777;
+  height: 12rem;
+  padding-top: 20px;
 }
 
 .hero-item > img {
@@ -284,7 +285,6 @@ sup.smaller {
   left: 0;
   min-width: 100%;
   height: 12rem;
-  opacity: 0.68;
 }
 
 .nav-link {
@@ -302,11 +302,12 @@ sup.smaller {
   .hero-item {
     height: 32rem;
     background-color: #777;
+    padding-top: 20px;
   }
 
   .hero-caption {
     bottom: 6rem !important;
-    padding-top: 20px;
+    padding-top: 200px;
     z-index: 10;
   }
 
@@ -325,8 +326,9 @@ sup.smaller {
 
 @media (min-width: 62em) {
   .hero-item {
-    height: 50rem;
     background-color: #777;
+    height: 50rem;
+    padding-top: 20px;
   }
 
   .hero-item > img {
@@ -337,6 +339,10 @@ sup.smaller {
     bottom: 22rem !important;
     padding-top: 20px;
     z-index: 10;
+  }
+
+  .hero-caption h1 {
+    font-size: 42px !important;
   }
 
   .nav-link {

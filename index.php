@@ -18,8 +18,8 @@ if (is_page() && !is_home() && !is_front_page()) :
             </div>
         </div>
         <div class="container marketing">
-            <div class="row">
-                <?php the_content(); ?>
+            <div class="col-lg-12 mb-5">
+                <div class="left-aligned-content"><?php the_content(); ?></div>
             </div>
         </div>
 <?php

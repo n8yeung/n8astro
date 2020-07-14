@@ -29,7 +29,9 @@
             <div class="col-lg-4 mb-5">
                 <img class="img-thumbnail rounded mb-3" alt="<?php echo esc_attr($title); ?>" src="<?php echo $image?>" width="300" height="300" />
                 <h2><?php echo $title; ?></h2>
-                <div class="card-content"><?php echo $content; ?>
+                <div class="left-aligned-content">
+                    <?php echo $content; ?>
+                </div>
             </div>
             <?php } ?>
         </div>

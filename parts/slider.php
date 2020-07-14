@@ -23,13 +23,6 @@
 
 <?php if( is_front_page() && count($slides) > 0 ) { ?>
     <div id="carouselSpot" class="carousel slide" data-ride="carousel">
-        
-        <ol class="carousel-indicators">
-            <?php for( $i = 0; $i < count($slides); $i++ ) { ?>
-            <li data-target="#carouselSpot" data-slide-to="<?php echo $i ?>" <?php if($i==0) { ?>class="active"<?php } ?>></li>
-            <?php } ?>
-        </ol>
-
         <div class="carousel-inner">
             <?php $i=0; foreach($slides as $slide) { extract($slide); ?>
             <div class="carousel-item <?php if($i == 0) { ?>active<?php } ?>">

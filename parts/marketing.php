@@ -26,10 +26,10 @@
     <div class="container marketing">
         <div class="row row-center">
             <?php $i = 0; foreach($marketing_spots as $marketing_spot) { extract($marketing_spot); ?>
-            <div class="col-lg-6 mb-5">
+            <div class="col-lg-4 mb-5">
                 <img class="img-thumbnail rounded mb-3" alt="<?php echo esc_attr($title); ?>" src="<?php echo $image?>" width="300" height="300" />
                 <h2><?php echo $title; ?></h2>
-                <?php echo $content; ?>
+                <div class="card-content"><?php echo $content; ?>
             </div>
             <?php } ?>
         </div>

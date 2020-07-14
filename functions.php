@@ -24,6 +24,18 @@ function n8astro_wp_setup() {
     add_theme_support( 'custom-logo', $defaults );
 }
 
+add_filter( 'wp_title', 'custom_titles', 10, 2 );
+function custom_titles( $title, $sep ) {
+
+    //Check if custom titles are enabled from your option framework
+    if ( ot_get_option( 'enable_custom_titles' ) === 'on' ) {
+        //Some silly example
+        $title = $title . ' ' . ' Hyatt International';
+    }
+
+    return $title;
+}
+
 /**
  * Register Custom Navigation Walker
  */

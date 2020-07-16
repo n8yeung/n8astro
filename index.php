@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php
 if (is_page() && !is_home() && !is_front_page()) :
-    while (have_posts()) : the_post()
+    while (have_posts()) : echo apply_filters('the_post', the_post()); 
 ?>
         <div class="hero">
             <div class="hero-inner">
@@ -10,7 +10,7 @@ if (is_page() && !is_home() && !is_front_page()) :
                         <img class="img-fluid" src="<?php the_post_thumbnail_url(); ?>" />
                         <div class="container">
                             <div class="hero-caption">
-                                <h1><?php the_title() ?></h1>
+                                <h1><?php echo apply_filters('the_title', the_title()); ?></h1>
                             </div>
                         </div>
                     <?php endif; ?>
@@ -19,7 +19,7 @@ if (is_page() && !is_home() && !is_front_page()) :
         </div>
         <div class="container marketing">
             <div class="col-lg-12 mb-5">
-                <div class="left-aligned-content"><?php the_content(); ?></div>
+                <div class="left-aligned-content"><?php echo apply_filters('the_content', the_content()); ?></div>
             </div>
         </div>
 <?php
@@ -66,17 +66,17 @@ if (is_home()) {
             if (is_front_page()) {
                 get_template_part('parts/marketing');
             } else if (is_home() && have_posts() || is_single()) {
-                while (have_posts()) : the_post();
+                while (have_posts()) : echo apply_filters('the_post', the_post());
             ?>
                     <?php if (!has_tag('slide') && !has_tag('marketing') && !has_tag('contactus')) { ?>
                         <div class="blog-post">
-                            <h2 class="blog-post-title"><?php the_title(); ?></h2>
+                            <h2 class="blog-post-title"><?php echo apply_filters('the_title', the_title()); ?></h2>
                             <p class="blog-post-meta"><?php the_date(); ?> by <?php the_author(); ?></p>
 
                             <?php if (is_single()) {
-                                the_content();
+                                echo apply_filters('the_content', the_content());
                             } else {
-                                the_excerpt();
+                                echo apply_filters('the_excerpt', the_excerpt());
                             ?>
                                 <a class="link" href="<?php the_permalink() ?>">Read More</a>
                             <?php } ?>

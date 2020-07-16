@@ -28,9 +28,9 @@
             <?php $i = 0; foreach($marketing_spots as $marketing_spot) { extract($marketing_spot); ?>
             <div class="col-lg-4 mb-5">
                 <img class="img-thumbnail rounded mb-3" alt="<?php echo esc_attr($title); ?>" src="<?php echo $image?>" width="300" height="300" />
-                <h2><?php echo $title; ?></h2>
+                <h2><?php echo apply_filters('the_title', $title); ?></h2>
                 <div class="left-aligned-content">
-                    <?php echo $content; ?>
+                    <?php echo apply_filters('the_content', $content); ?>
                 </div>
             </div>
             <?php } ?>
